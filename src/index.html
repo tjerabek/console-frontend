@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Apiary Console</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,300,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/app.css" />
 </head>
 
-<body>
+<body class="page-home">
     <header class="top-bar">
         <div class="logo"></div>
     </header>
@@ -26,12 +27,48 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row main-content">
         <div class="one-half columns">
-        left
+            <h2>Headers</h2>
+            <div class="panel headers-panel">
+                <div class="panel-input-row panel-row">
+                    <input type="text" class="panel-input-small base-input" value="Content-type" />
+                    <input type="text" class="panel-input-large base-input" value="application/json" />
+                    <div class="panel-input-tools">
+                        <a href="#" class="pin-btn"><span>Pin</span></a>
+                        <a href="#" class="remove-btn"><span>Remove</span></a>
+                    </div>
+                </div>
+                <div class="panel-input-row panel-row">
+                    <a href="#" class="btn panel-btn">Add new header</a>
+                </div>
+            </div>
+
+            <h2>Body</h2>
+            <ul class="tabs">
+                <li class="active"><a href="#">Form data</a></li>
+                <li><a href="#">Raw</a></li>
+                <li><a href="#">Binary</a></li>
+            </ul>
+            <div class="panel body-panel">
+                <div class="panel-input-row panel-row">
+                    <div class="panel-input-small">
+                        <a href="#" class="type-select">Text</a>
+                    </div>
+                    <input type="text" class="panel-input-large base-input" placeholder="Value" />
+                    <div class="panel-input-tools">
+                        <a href="#" class="pin-btn"><span>Pin</span></a>
+                        <a href="#" class="remove-btn"><span>Remove</span></a>
+                    </div>
+                </div>
+                <div class="panel-input-row panel-row">
+                    <a href="#" class="btn panel-btn">Add new header</a>
+                </div>
+            </div>
+
         </div>
         <div class="one-half columns">
-        right
+        <h2>Call history</h2>
         </div>
     </div>
 

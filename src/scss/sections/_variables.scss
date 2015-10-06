@@ -5,21 +5,51 @@ $light-gray:                                #F0F1F5;
 $body-bg:                                   $light-gray;
 $text-color:                                #000;
 $font-family:                               'Source Sans Pro';
+$font-family2:                              'Source Code Pro';
 $font-weight-medium:                        600;
+$font-weight-light:                         400;
+
+$base-image-url:                            "sprites/base/";
 
 // Colors
 
+$main-blue:                                 #3399FF;
 $dark-blue:                                 #4A4F62;
 $dark-blue2:                                #5D6577;
 $dark-blue3:                                #3F4555;
-
+$light-blue:                                #F0F1F4;
+$light-blue2:                               #CAD0DE;
+$light-blue3:                               #A6AEC0;
+$border-color:                              #DDDFE6;
 $white:                                     #fff;
 $main-green:                                #49CC90;
 
+// Top bar colors
+
 $top-bar-bg:                                $dark-blue;
 $smart-bar-bg:                              $white;
-
 $smart-input-border:                        $light-gray;
+
+// Headings colors
+
+$headings-color:                            $dark-blue2;
+
+// Panel colors
+
+$panel-bg:                                  $white;
+$panel-row-border:                          $light-blue;
+
+$panel-btn-color:                           $light-blue2;
+$panel-btn-hover-color:                     $dark-blue;
+
+// Input colors
+
+$base-input-color:                          $dark-blue2;
+
+// Tabs
+
+$tabs-inactive-color:                       $light-blue3;
+$tabs-active-color:                         $main-blue;
 
 // Helpers
 
@@ -31,6 +61,7 @@ $base-method:                               ease;
 
 $opacity-transition:                        opacity $base-speed $base-method;
 $background-transition:                     background $base-speed $base-method;
+$color-transition:                          color $base-speed $base-method;
 
 // Buttons
 $main-btn-bg:                               $main-green;

@@ -48,6 +48,58 @@
         @include main-sprite(dark-down);
         right: 5px;
         top: 50%;
-        margin-top: -3px;
+        margin-top: -(image-height($base-image-url+$dark-down-url)/2);
+    }
+}
+.panel-btn {
+    @include mix-main-btn;
+    text-decoration: none;
+    font-family: $font-family2;
+    font-size: 13px;
+    line-height: 17px;
+    color: $panel-btn-color;
+    display: block;
+    padding: 14px 19px;
+    @include transition($color-transition);
+    width: 100%;
+
+    &:hover {
+        color: $panel-btn-hover-color;
+    }
+}
+.pin-btn,
+.remove-btn {
+    display: inline-block;
+    height: 45px;
+    width: 30px;
+    position: relative;
+    vertical-align: top;
+    opacity: .35;
+
+    span{
+        @include hide-text();
+        display: block;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+        opacity: 1;
+        outline: none;
+    }
+}
+.pin-btn{
+    span{
+        @include main-sprite(pin);
+        position: absolute;
+        top: 50%;
+        margin-top: -(image-height($base-image-url+$pin-url)/2);
+    }
+}
+.remove-btn{
+    span{
+        @include main-sprite(cross);
+        position: absolute;
+        top: 50%;
+        margin-top: -(image-height($base-image-url+$cross-url)/2);
     }
 }

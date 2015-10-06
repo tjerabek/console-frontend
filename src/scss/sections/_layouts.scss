@@ -19,3 +19,31 @@
         @include order(4);
     }
 }
+.row{
+    @include clearfix;
+    clear: both;
+
+    .one-half{
+        width: 50%;
+        float: left;
+
+        &:first-child {
+            border-right: 1px solid $border-color;
+        }
+    }
+}
+.panel-input-row {
+    @include display-flex;
+    @include flex-direction(row);
+
+    .panel-input-small{
+        @include flex(2);
+    }
+    .panel-input-large{
+        @include flex(3);
+    }
+    .panel-input-tools{
+        @include flex(1);
+        text-align: right;
+    }
+}

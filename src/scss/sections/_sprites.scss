@@ -35,6 +35,12 @@ $main-sprites-retina: sprite-map("sprites/retina/*.png", $spacing: $main-spacing
 
 // General sprite classes
 
+$lock-open-url: "lock-open.png";
+$logo-url: "logo.png";
+$dark-down-url: "dark-down.png";
+$pin-url: "pin.png";
+$cross-url: "cross.png";
+
 .lock-open {
     @include main-sprite(lock-open);
 }
@@ -43,4 +49,10 @@ $main-sprites-retina: sprite-map("sprites/retina/*.png", $spacing: $main-spacing
 }
 .dark-down {
     @include main-sprite(dark-down);
+}
+.pin {
+    @include main-sprite(pin);
+}
+.cross {
+    @include main-sprite(cross);
 }
