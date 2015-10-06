@@ -25,4 +25,121 @@
             padding: 26px $left-border;
         }
     }
+    .history-panel {
+        margin-bottom: 6px;
+
+        &.history-open-panel{
+            padding-bottom: 45px;
+        }
+        .history-header{
+            padding: 24px 23px;
+            border-bottom: 1px solid $light-gray;
+
+            .url-attr{
+                margin-top: 10px;
+            }
+        }
+        .time {
+            margin-right: 10px;
+        }
+        .history-tab{
+            @include clearfix;
+            display: block;
+            padding: 15px 18px;
+            padding-left: 37px;
+            text-decoration: none;
+            color: $history-tab-color;
+            position: relative;
+            @include transition($color-transition);
+
+            &:hover{
+                color: darken($history-tab-color, 20%);
+            }
+
+            .number-info{
+                float: right;
+            }
+            &:before{
+                @include addon;
+                @include main-sprite(arrow-right-blue);
+                left: 22px;
+                top: 50%;
+                margin-top: -(image-height($base-image-url+$arrow-right-blue-url)/2);
+            }
+            &.open{
+                &:before{
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+        .tabs{
+            padding-left: 22px;
+            padding-top: 18px;
+            margin-bottom: 0;
+        }
+        .search{
+            position: relative;
+
+            &:before{
+                @include addon;
+                @include main-sprite(search);
+                left: 22px;
+                top: 50%;
+                margin-top: -(image-height($base-image-url+$search-url)/2);
+            }
+            input{
+                width: 100%;
+                font-family: $font-family;
+                padding-left: 40px;
+            }
+        }
+    }
+    .formated-output {
+        .line {
+            @include display-flex;
+            @include flex-direction(row);
+            border-bottom: 1px solid $formated-border-color;
+            padding: 13px;
+            position: relative;
+
+            .key,
+            .value{
+                @include flex(1);
+                font-family: $font-family2;
+                font-size: 14px;
+                color: $formated-color;
+                line-height: 18px;
+            }
+
+            .number-info{
+                border: 0;
+                font-style: italic;
+                color: #A6AEC0;
+            }
+
+            &.closed,
+            &.open {
+                padding-left: 40px;
+            }
+            &.closed {
+                &:before{
+                    @include addon;
+                    @include main-sprite(arrow-right-blue);
+                    left: 22px;
+                    top: 50%;
+                    margin-top: -(image-height($base-image-url+$arrow-right-blue-url)/2);
+                }
+            }
+            &.open {
+                &:before{
+                    @include addon;
+                    @include main-sprite(arrow-right-blue);
+                    left: 22px;
+                    top: 50%;
+                    margin-top: -(image-height($base-image-url+$arrow-right-blue-url)/2);
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+    }
 }

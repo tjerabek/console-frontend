@@ -51,6 +51,30 @@ $base-input-color:                          $dark-blue2;
 $tabs-inactive-color:                       $light-blue3;
 $tabs-active-color:                         $main-blue;
 
+// Url
+
+$url-base-color:                            #4B5264;
+$url-param-color:                           #FF6D66;
+
+// Labels
+
+$label-color:                               $dark-blue2;
+$label-bg:                                  $light-gray;
+
+$label-ok-bg:                               #F2FBF7;
+$label-ok-color:                            #0E422A;
+
+$time-color:                                darken($light-gray, 30%);
+
+// Formated
+
+$formated-border-color:                     $light-blue;
+$formated-color:                            $dark-blue3;
+
+// History tabs
+
+$history-tab-color:                         $dark-blue3;
+
 // Helpers
 
 $left-border:                               30px;

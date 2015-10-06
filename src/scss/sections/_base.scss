@@ -111,3 +111,68 @@ h2 {
         }
     }
 }
+.tag{
+    @include mix-tag;
+}
+.url{
+    .url-base,
+    .url-domain,
+    .url-param {
+        font-family: $font-family2;
+        font-size: 13px;
+        color: $url-base-color;
+        line-height: 21px;
+    }
+    .url-param{
+        color: $url-param-color;
+    }
+    .tag{
+        margin-right: 7px;
+    }
+}
+.label {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: $font-family2;
+    font-weight: $font-weight-medium;
+    font-size: 10px;
+    color: $label-color;
+    line-height: 13px;
+    background: $label-bg;
+    padding: 3px 9px;
+
+    &.label-ok {
+        background: $label-ok-bg;
+        color: $label-ok-color;
+        position: relative;
+        padding-left: 21px;
+
+        &:before{
+            content: '';
+            display: block;
+            width: 7px;
+            height: 7px;
+            background: $main-green;
+            position: absolute;
+            left: 8px;
+            top: 50%;
+            margin-top: -4px;
+            border-radius: 7px;
+        }
+    }
+}
+.time {
+    font-style: italic;
+    font-size: 10px;
+    color: $time-color;
+    line-height: 13px;
+}
+.number-info {
+    border: 1px solid $border-color;
+    font-weight: $font-weight-medium;
+    font-size: 12px;
+    color: $dark-blue2;
+    line-height: 15px;
+    padding: 2px 10px;
+    border-radius: 15px;
+}

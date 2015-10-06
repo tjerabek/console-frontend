@@ -11,3 +11,13 @@
     display: block;
     position: absolute;
 }
+@mixin mix-tag {
+    color: $switch-color;
+    display: inline-block;
+    font-weight: $font-weight-medium;
+    font-size: 10px;
+    line-height: 13px;
+    border: 1px solid $switch-border-color;
+    padding: 3px 7px 3px 7px;
+    border-radius: 2px;
+}

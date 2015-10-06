@@ -40,6 +40,8 @@ $logo-url: "logo.png";
 $dark-down-url: "dark-down.png";
 $pin-url: "pin.png";
 $cross-url: "cross.png";
+$arrow-right-blue-url: "arrow-right-blue.png";
+$search-url: "search.png";
 
 .lock-open {
     @include main-sprite(lock-open);
@@ -55,4 +57,10 @@ $cross-url: "cross.png";
 }
 .cross {
     @include main-sprite(cross);
+}
+.arrow-right-blue {
+    @include main-sprite(arrow-right-blue);
+}
+.icon-search {
+    @include main-sprite(search);
 }
