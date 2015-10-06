@@ -6,3 +6,8 @@
   cursor: pointer;
   -webkit-appearance: none;
 }
+@mixin addon {
+    content: '';
+    display: block;
+    position: absolute;
+}

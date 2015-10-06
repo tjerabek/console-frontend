@@ -1,0 +1,53 @@
+.lock-open {
+    @include mix-main-btn;
+    @include hide-text();
+    opacity: .25;
+    @include transition($opacity-transition);
+
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.main-btn{
+    @include mix-main-btn;
+    display: inline-block;
+    @include appearance(none);
+    border-radius: 3px;
+    border: 0;
+    background: $main-btn-bg;
+    color: $main-btn-color;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 13px 41px;
+    text-align: center;
+    @include transition($background-transition);
+
+    &:hover{
+        background: darken($main-btn-bg, 10%);
+    }
+}
+.switch {
+    @include mix-main-btn;
+    color: $switch-color;
+    display: inline-block;
+    font-weight: $font-weight-medium;
+    font-size: 10px;
+    line-height: 13px;
+    border: 1px solid $switch-border-color;
+    padding: 3px 20px 3px 7px;
+    border-radius: 2px;
+    @include transition($background-transition);
+    position: relative;
+
+    &:hover {
+        background: $light-gray;
+    }
+    &:after{
+        @include addon;
+        @include main-sprite(dark-down);
+        right: 5px;
+        top: 50%;
+        margin-top: -3px;
+    }
+}

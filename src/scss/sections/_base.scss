@@ -2,10 +2,17 @@
 * File contains site-wide styles. Main body, html styles. Base typography styles.
 **/
 
+*{
+    @include box-sizing(inherit);
+}
 html{
     -webkit-font-smoothing: antialiased;
+    padding: 0;
+    @include box-sizing(border-box);
 }
 body{
+    padding: 0;
+    margin: 0;
     background: $body-bg;
     color: $text-color;
     font-family: $font-family;

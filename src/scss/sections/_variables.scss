@@ -1,5 +1,40 @@
 // Base
 
-$body-bg:                                   #F1F1F1;
+$light-gray:                                #F0F1F5;
+
+$body-bg:                                   $light-gray;
 $text-color:                                #000;
-$font-family:                               'Arial';
+$font-family:                               'Source Sans Pro';
+$font-weight-medium:                        600;
+
+// Colors
+
+$dark-blue:                                 #4A4F62;
+$dark-blue2:                                #5D6577;
+$dark-blue3:                                #3F4555;
+
+$white:                                     #fff;
+$main-green:                                #49CC90;
+
+$top-bar-bg:                                $dark-blue;
+$smart-bar-bg:                              $white;
+
+$smart-input-border:                        $light-gray;
+
+// Helpers
+
+$left-border:                               30px;
+
+// Transitions
+$base-speed:                                200ms;
+$base-method:                               ease;
+
+$opacity-transition:                        opacity $base-speed $base-method;
+$background-transition:                     background $base-speed $base-method;
+
+// Buttons
+$main-btn-bg:                               $main-green;
+$main-btn-color:                            $white;
+
+$switch-color:                              $dark-blue2;
+$switch-border-color:                       $dark-blue3;

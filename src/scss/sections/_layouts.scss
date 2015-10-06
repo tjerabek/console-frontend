@@ -1,0 +1,21 @@
+.smart-bar {
+    @include display-flex;
+    @include flex-direction(row);
+
+    .security-section {
+        @include order(1);
+        padding: 10px;
+    }
+    .method-section{
+        @include order(2);
+        padding: 13px 15px;
+    }
+    .input-section {
+        @include flex(20);
+        @include order(3);
+        padding: 0 10px;
+    }
+    .button-section {
+        @include order(4);
+    }
+}

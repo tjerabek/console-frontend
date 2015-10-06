@@ -38,3 +38,9 @@ $main-sprites-retina: sprite-map("sprites/retina/*.png", $spacing: $main-spacing
 .lock-open {
     @include main-sprite(lock-open);
 }
+.logo {
+    @include main-sprite(logo);
+}
+.dark-down {
+    @include main-sprite(dark-down);
+}
