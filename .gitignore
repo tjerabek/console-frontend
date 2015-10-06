@@ -1,0 +1,17 @@
+.idea
+.vscode
+node_modules
+bower_components
+node
+build
+report
+
+.sass-cache
+src/css/app.css
+src/images/sprites/*.png
+src/templates.js
+
+src/scripts.js
+src/vendor.js
+npm-debug.log
+src/templates.js

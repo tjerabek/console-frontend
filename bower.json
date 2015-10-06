@@ -1,0 +1,16 @@
+{
+  "name": "ApairyConsole",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.3"
+  },
+  "overrides": {
+    "modernizr": {
+      "main": "modernizr.js"
+    }
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4"
+  }
+}

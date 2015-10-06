@@ -1,0 +1,40 @@
+// General Sprite Defaults
+// You can override them before you import this file.
+$main-sprite-base-class: ".main-sprite" !default;
+$main-sprite-dimensions: true !default;
+$main-spacing: 10px !default;
+$main-position: 0% !default;
+$main-repeat: no-repeat !default;
+
+$main-sprites: sprite-map("sprites/base/*.png", $spacing: $main-spacing, $repeat: $main-repeat, $position: $main-position);
+$main-sprites-retina: sprite-map("sprites/retina/*.png", $spacing: $main-spacing * 2, $repeat: $main-repeat, $position: $main-position);
+
+// All sprites should extend this class
+// The main-sprite mixin will do so for you.
+#{$main-sprite-base-class} {
+  background: $main-sprites $main-repeat;
+
+  .sprite-text{
+    display: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  #{$main-sprite-base-class} {
+    background: $main-sprites-retina $main-repeat;
+    background-size: ceil(image-width(sprite-path($main-sprites-retina)) / 2) auto;
+  }
+}
+
+// Extends the sprite base class and set the background position for the desired sprite.
+// It will also apply the image dimensions if $dimensions is true.
+@mixin main-sprite($name, $dimensions: $main-sprite-dimensions, $offset-x: 0, $offset-y: 0) {
+  @extend #{$main-sprite-base-class};
+  @include sprite($main-sprites, $name, $dimensions, $offset-x, $offset-y);
+}
+
+// General sprite classes
+
+.lock-open {
+    @include main-sprite(lock-open);
+}
