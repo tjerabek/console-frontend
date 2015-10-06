@@ -100,6 +100,11 @@
             @include flex-direction(row);
             border-bottom: 1px solid $formated-border-color;
             padding: 13px;
+            padding-left: 22px;
+
+            &.level-2{
+                padding-left: 60px;
+            }
             position: relative;
 
             .key,
