@@ -34,9 +34,36 @@
         .history-header{
             padding: 24px 23px;
             border-bottom: 1px solid $light-gray;
+            position: relative;
 
             .url-attr{
                 margin-top: 10px;
+
+                .blueprint-changed {
+                    float: right;
+                    font-size: 10px;
+                    color: $dark-blue2;
+                    line-height: 30px;
+                    display: inline-block;
+                    margin-right: 50px;
+                    position: relative;
+
+                    &:before{
+                        content: '';
+                        display: inline-block;
+                        width: 7px;
+                        height: 7px;
+                        background: $error-color;
+                        margin-right: 4px;
+                        border-radius: 7px;
+                    }
+                }
+            }
+            .history-tools{
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                margin-top: -13px;
             }
         }
         .time {
@@ -124,7 +151,12 @@
 
             &.closed,
             &.open {
+                @include mix-main-btn;
                 padding-left: 40px;
+
+                &:hover .key{
+                    color: $main-blue;
+                }
             }
             &.closed {
                 &:before{
@@ -203,6 +235,41 @@
                         margin-top: -7px;
                     }
                 }
+            }
+            &.validation-error {
+                .param-type {
+                    color: $error-color;
+                    position: relative;
+
+                    &:before{
+                        content: '';
+                        display: block;
+                        @include main-sprite(error-mark);
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        margin-top: -(image-height($base-image-url+$error-mark-url)/2);
+                    }
+                }
+                .param-value {
+                    position: relative;
+
+
+                    input {
+                        position: relative;
+                        background: $white;
+                        z-index: 2;
+                    }
+
+                    .error-line{
+                        border-bottom: 2px dotted $error-color;
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -2px;
+                        margin-left: 19px;
+                    }
+                }
+
             }
         }
         .suggestion-row{

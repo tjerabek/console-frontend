@@ -42,6 +42,9 @@ $pin-url: "pin.png";
 $cross-url: "cross.png";
 $arrow-right-blue-url: "arrow-right-blue.png";
 $search-url: "search.png";
+$star-url: "star.png";
+$submenu-url: "submenu.png";
+$error-mark-url: "error-mark.png";
 
 .lock-open {
     @include main-sprite(lock-open);
@@ -63,4 +66,13 @@ $search-url: "search.png";
 }
 .icon-search {
     @include main-sprite(search);
+}
+.star {
+    @include main-sprite(star);
+}
+.submenu {
+    @include main-sprite(submenu);
+}
+.error-mark {
+    @include main-sprite(error-mark);
 }

@@ -27,8 +27,8 @@
         width: 50%;
         float: left;
 
-        &:first-child {
-            border-right: 1px solid $border-color;
+        &:last-child {
+            border-left: 1px solid $border-color;
         }
     }
 }
@@ -52,7 +52,7 @@
     @include flex-direction(row);
 
     .param-type {
-        @include flex(1);
+        @include flex(2);
     }
     .param-key {
         @include flex(4);

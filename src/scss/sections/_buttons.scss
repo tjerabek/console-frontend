@@ -69,10 +69,13 @@
     position: relative;
     vertical-align: top;
     opacity: .35;
+    @include transition($opacity-transition);
 
     span{
         @include hide-text();
         display: block;
+        position: absolute;
+        top: 50%;
     }
     &:hover,
     &:active,
@@ -84,16 +87,49 @@
 .pin-btn{
     span{
         @include main-sprite(pin);
-        position: absolute;
-        top: 50%;
         margin-top: -(image-height($base-image-url+$pin-url)/2);
     }
 }
 .remove-btn{
     span{
         @include main-sprite(cross);
-        position: absolute;
-        top: 50%;
         margin-top: -(image-height($base-image-url+$cross-url)/2);
+    }
+}
+.submenu-btn,
+.star-btn {
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    position: relative;
+    opacity: .35;
+    @include transition($opacity-transition);
+
+    span {
+        @include hide-text();
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+    }
+    &:hover,
+    &:active,
+    &:focus{
+        opacity: 1;
+        outline: none;
+    }
+}
+.submenu-btn {
+    span {
+        @include main-sprite(submenu);
+        margin-top: -(image-height($base-image-url+$submenu-url)/2);
+        margin-left: -(image-width($base-image-url+$submenu-url)/2);
+    }
+}
+.star-btn {
+    span {
+        @include main-sprite(star);
+        margin-top: -(image-height($base-image-url+$star-url)/2);
+        margin-left: -(image-width($base-image-url+$star-url)/2);
     }
 }
