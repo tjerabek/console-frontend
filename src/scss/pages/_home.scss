@@ -1,6 +1,17 @@
 // Home
 
 .page-home {
+    .main-btn{
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+
+        @media screen and (min-width: $break-small) {
+            display: inline-block;
+            width: auto;
+            margin-top: 0;
+        }
+    }
     .smart-bar {
         background: $smart-bar-bg;
         padding: 28px $left-border;
@@ -33,6 +44,7 @@
         }
         .history-header{
             padding: 24px 23px;
+            padding-right: 80px;
             border-bottom: 1px solid $light-gray;
             position: relative;
 
@@ -40,13 +52,17 @@
                 margin-top: 10px;
 
                 .blueprint-changed {
-                    float: right;
+
                     font-size: 10px;
                     color: $dark-blue2;
                     line-height: 30px;
                     display: inline-block;
                     margin-right: 50px;
                     position: relative;
+
+                    @media screen and (min-width: $break-small) {
+                        float: right;
+                    }
 
                     &:before{
                         content: '';
@@ -196,16 +212,27 @@
         }
         .uri-params-form-row {
             .param-type {
-                padding: 14px 19px;
+                padding: 14px 0;
                 font-family: $font-family2;
                 font-size: 13px;
                 color: $param-color;
                 line-height: 17px;
+
+                @media screen and (min-width: $break-small) {
+                    padding: $main-padding;
+                }
             }
             .param-key,
             .param-value{
                 input {
                     width: 100%;
+                }
+                .base-input{
+                    padding: 14px 0;
+
+                    @media screen and (min-width: $break-small) {
+                        padding: $main-padding;
+                    }
                 }
             }
             .param-value input{
@@ -220,13 +247,18 @@
             .param-tools {
                 .required {
                     display: inline-block;
-                    padding: 14px 19px;
-                    padding-right: 40px;
+                    padding: 7px 0;
+                    padding-right: 20px;
                     font-size: 10px;
                     color: $required-color;
                     line-height: 20px;
                     font-style: italic;
                     position: relative;
+
+                    @media screen and (min-width: $break-small) {
+                        padding: $main-padding;
+                        padding-right: 40px;
+                    }
 
                     &:after {
                         content: '';
@@ -236,10 +268,28 @@
                         border: 2px solid $required-color;
                         border-radius: 10px;
                         position: absolute;
-                        right: 19px;
+                        right: 0;
                         top: 50%;
                         margin-top: -7px;
+
+                        @media screen and (min-width: $break-small) {
+                            right: 19px;
+                        }
                     }
+                }
+                .remove-btn {
+                    height: 35px;
+
+                    @media screen and (min-width: $break-small) {
+                        height: 45px;
+                    }
+                }
+            }
+            .panel-btn{
+                padding: 14px 0;
+
+                @media screen and (min-width: $break-small) {
+                    padding: $main-padding;
                 }
             }
             &.validation-error {
@@ -253,8 +303,12 @@
                         @include main-sprite(error-mark);
                         position: absolute;
                         top: 50%;
-                        left: 10px;
+                        left: -10px;
                         margin-top: -(image-height($base-image-url+$error-mark-url)/2);
+
+                        @media screen and (min-width: $break-small) {
+                            left: 10px;
+                        }
                     }
                 }
                 .param-value {
@@ -272,14 +326,18 @@
                         display: inline-block;
                         position: absolute;
                         bottom: -2px;
-                        margin-left: 19px;
+
+
+                        @media screen and (min-width: $break-small) {
+                            margin-left: 19px;
+                        }
                     }
                 }
 
             }
         }
         .suggestion-row{
-            padding: 14px 19px;
+            padding: $main-padding;
         }
         .uri-params-form-row,
         .suggestion-row{

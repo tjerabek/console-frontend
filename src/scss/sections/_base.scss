@@ -74,9 +74,13 @@ h2 {
     &:after{
         @include addon;
         @include main-sprite(dark-down);
-        right: 5px;
+        right: 19px;
         top: 50%;
         margin-top: -(image-height($base-image-url+$dark-down-url)/2);
+
+        @media screen and (min-width: $break-small) {
+            right: 5px;
+        }
     }
 }
 .tabs {

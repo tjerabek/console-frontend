@@ -10,6 +10,36 @@
         display: block;
     }
 }
+.smart-bar {
+    .method-section{
+        float: right;
+    }
+    .security-section{
+        float: left;
+    }
+    .input-section{
+        clear: both;
+    }
+}
+.uri-params-form-row{
+    @include display-flex;
+    @include flex-direction(column);
+
+    .param-type {
+        @include order(1);
+    }
+    .param-tools{
+        @include order(2);
+        margin-top: -40px;
+        text-align: right;
+    }
+    .param-key {
+        @include order(3);
+    }
+    .param-value {
+        @include order(4);
+    }
+}
 
 @media screen and (min-width: $break-small) {
 
@@ -34,16 +64,21 @@
 
         .param-type {
             @include flex(2);
+            @include order(1);
         }
         .param-key {
             @include flex(4);
+            @include order(2);
         }
         .param-value {
-            @include flex(20);
+            @include flex(4);
+            @include order(3);
         }
         .param-tools{
-            @include flex(4);
+            @include flex(2);
             text-align: right;
+            @include order(4);
+            margin: 0;
         }
     }
     .smart-bar {
@@ -51,12 +86,14 @@
         @include flex-direction(row);
 
         .security-section {
+            float: none;
             @include order(1);
             padding: 10px;
         }
         .method-section{
             @include order(2);
             padding: 13px 15px;
+            float: none;
         }
         .input-section {
             @include flex(20);

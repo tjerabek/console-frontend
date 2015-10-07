@@ -61,21 +61,29 @@
         color: $panel-btn-hover-color;
     }
 }
+// Todo: fix
 .pin-btn,
 .remove-btn {
     display: inline-block;
-    height: 45px;
-    width: 30px;
+
     position: relative;
     vertical-align: top;
     opacity: .35;
     @include transition($opacity-transition);
 
+    height: 45px;
+    width: 30px;
+
     span{
-        @include hide-text();
         display: block;
+        @include hide-text();
         position: absolute;
         top: 50%;
+        left: 50%;
+
+        @media screen and (min-width: $break-small) {
+            left: 0;
+        }
     }
     &:hover,
     &:active,
@@ -96,6 +104,7 @@
         margin-top: -(image-height($base-image-url+$cross-url)/2);
     }
 }
+
 .submenu-btn,
 .star-btn {
     width: 26px;
