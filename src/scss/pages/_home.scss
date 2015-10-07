@@ -147,4 +147,97 @@
             }
         }
     }
+    .smart-bar-content {
+        background: $smart-bar-bg;
+        padding-left: 150px;
+        padding-right: 210px;
+        margin-top: -30px;
+
+        form{
+            margin: 0;
+        }
+        .uri-params-form-row {
+            .param-type {
+                padding: 14px 19px;
+                font-family: $font-family2;
+                font-size: 13px;
+                color: $param-color;
+                line-height: 17px;
+            }
+            .param-key,
+            .param-value{
+                input {
+                    width: 100%;
+                }
+            }
+            .param-value input{
+                color: $url-param-color;
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: darken($url-param-color, 20%);
+                }
+            }
+            .param-tools {
+                .required {
+                    display: inline-block;
+                    padding: 14px 19px;
+                    padding-right: 40px;
+                    font-size: 10px;
+                    color: $required-color;
+                    line-height: 20px;
+                    font-style: italic;
+                    position: relative;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 10px;
+                        height: 10px;
+                        border: 2px solid $required-color;
+                        border-radius: 10px;
+                        position: absolute;
+                        right: 19px;
+                        top: 50%;
+                        margin-top: -7px;
+                    }
+                }
+            }
+        }
+        .suggestion-row{
+            padding: 14px 19px;
+        }
+        .uri-params-form-row,
+        .suggestion-row{
+            border-bottom: 1px solid $smart-input-border;
+
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        .panel-btn {
+            @include transition($background-transition, $color-transition);
+            &:hover{
+                background: $suggestion-hover-bg;
+            }
+        }
+        .suggestion-row {
+            @include mix-main-btn;
+            @include transition($background-transition, $color-transition);
+
+            &:hover{
+                background: $suggestion-hover-bg;
+            }
+            h5{
+                font-weight: normal;
+                margin: 0;
+                font-size: 10px;
+                color: $suggestion-title-color;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 13px;
+            }
+        }
+    }
 }

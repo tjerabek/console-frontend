@@ -47,3 +47,21 @@
         text-align: right;
     }
 }
+.uri-params-form-row {
+    @include display-flex;
+    @include flex-direction(row);
+
+    .param-type {
+        @include flex(1);
+    }
+    .param-key {
+        @include flex(4);
+    }
+    .param-value {
+        @include flex(20);
+    }
+    .param-tools{
+        @include flex(4);
+        text-align: right;
+    }
+}
