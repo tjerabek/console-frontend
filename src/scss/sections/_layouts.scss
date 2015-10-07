@@ -1,67 +1,89 @@
-.smart-bar {
-    @include display-flex;
-    @include flex-direction(row);
-
-    .security-section {
-        @include order(1);
-        padding: 10px;
-    }
-    .method-section{
-        @include order(2);
-        padding: 13px 15px;
-    }
-    .input-section {
-        @include flex(20);
-        @include order(3);
-        padding: 0 10px;
-    }
-    .button-section {
-        @include order(4);
-    }
-}
 .row{
     @include clearfix;
     clear: both;
+}
+.panel-input-small,
+.panel-input-large {
+    width: 100%;
 
-    .one-half{
-        width: 50%;
-        float: left;
+    .type-select{
+        display: block;
+    }
+}
 
-        &:last-child {
-            border-left: 1px solid $border-color;
+@media screen and (min-width: $break-small) {
+
+    .panel-input-row {
+        @include display-flex;
+        @include flex-direction(row);
+
+        .panel-input-small{
+            @include flex(2);
+        }
+        .panel-input-large{
+            @include flex(3);
+        }
+        .panel-input-tools{
+            @include flex(1);
+            text-align: right;
         }
     }
-}
-.panel-input-row {
-    @include display-flex;
-    @include flex-direction(row);
+    .uri-params-form-row {
+        @include display-flex;
+        @include flex-direction(row);
 
-    .panel-input-small{
-        @include flex(2);
+        .param-type {
+            @include flex(2);
+        }
+        .param-key {
+            @include flex(4);
+        }
+        .param-value {
+            @include flex(20);
+        }
+        .param-tools{
+            @include flex(4);
+            text-align: right;
+        }
     }
-    .panel-input-large{
-        @include flex(3);
-    }
-    .panel-input-tools{
-        @include flex(1);
-        text-align: right;
-    }
-}
-.uri-params-form-row {
-    @include display-flex;
-    @include flex-direction(row);
+    .smart-bar {
+        @include display-flex;
+        @include flex-direction(row);
 
-    .param-type {
-        @include flex(2);
+        .security-section {
+            @include order(1);
+            padding: 10px;
+        }
+        .method-section{
+            @include order(2);
+            padding: 13px 15px;
+        }
+        .input-section {
+            @include flex(20);
+            @include order(3);
+            padding: 0 10px;
+        }
+        .button-section {
+            @include order(4);
+        }
     }
-    .param-key {
-        @include flex(4);
+
+}
+@media screen and (min-width: $break-large) {
+
+    .row{
+        @include clearfix;
+        clear: both;
+
+        .one-half{
+            width: 50%;
+            float: left;
+
+            &:last-child {
+                border-left: 1px solid $border-color;
+            }
+        }
     }
-    .param-value {
-        @include flex(20);
-    }
-    .param-tools{
-        @include flex(4);
-        text-align: right;
-    }
+
+
 }

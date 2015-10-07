@@ -181,9 +181,15 @@
     }
     .smart-bar-content {
         background: $smart-bar-bg;
-        padding-left: 150px;
-        padding-right: 210px;
         margin-top: -30px;
+        padding: 0 30px;
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $break-large) {
+            padding-left: 150px;
+            padding-right: 210px;
+        }
+
 
         form{
             margin: 0;
