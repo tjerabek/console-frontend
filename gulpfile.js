@@ -26,7 +26,7 @@ gulp.task('compass', function() {
 // Watch SCSS files
 
 gulp.task('watch', function() {
-    gulp.watch('./src/scss/*.scss', function () {
+    gulp.watch('./src/scss/**/*.scss', function () {
       gulp.run('compass');
     });
 })
