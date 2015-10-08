@@ -2,9 +2,7 @@
   "name": "ApiaryConsole",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "prestart": "npm install",
     "start": "gulp"
   },
   "devDependencies": {

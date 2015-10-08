@@ -1,10 +1,10 @@
 @mixin mix-main-btn{
-  outline: none;
-  @include transform(translate(0, 0));
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  user-select: none;
-  cursor: pointer;
-  -webkit-appearance: none;
+    outline: none;
+    @include transform(translate(0, 0));
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    user-select: none;
+    cursor: pointer;
+    -webkit-appearance: none;
 }
 @mixin addon {
     content: '';

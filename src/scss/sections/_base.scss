@@ -37,6 +37,9 @@ h2 {
         margin-top: 0;
     }
 }
+
+// Base panel style used for header, body and history
+
 .panel {
     background: $panel-bg;
     border-radius: 4px;
@@ -49,6 +52,9 @@ h2 {
         }
     }
 }
+
+// Base input style
+
 .base-input,
 .type-select {
     padding: 14px 19px;
@@ -66,6 +72,9 @@ h2 {
         outline: none;
     }
 }
+
+// Type dropdown style
+
 .type-select{
     text-decoration: none;
     display: inline-block;
@@ -83,6 +92,9 @@ h2 {
         }
     }
 }
+
+// Base tabs style
+
 .tabs {
     list-style: none;
     margin: 0;
@@ -118,7 +130,10 @@ h2 {
 .tag{
     @include mix-tag;
 }
-.url{
+
+// Url formating
+
+.url {
     .url-base,
     .url-domain,
     .url-param {
@@ -134,6 +149,9 @@ h2 {
         margin-right: 7px;
     }
 }
+
+// Label style, used for response and server type
+
 .label {
     display: inline-block;
     text-transform: uppercase;
@@ -165,12 +183,18 @@ h2 {
         }
     }
 }
+
+// Time info style
+
 .time {
     font-style: italic;
     font-size: 10px;
     color: $time-color;
     line-height: 13px;
 }
+
+// Number info
+
 .number-info {
     border: 1px solid $border-color;
     font-weight: $font-weight-medium;
