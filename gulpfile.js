@@ -11,7 +11,7 @@ gulp.task('webserver', function() {
   });
 });
 
-// Compass task
+// Compass task, css
 
 gulp.task('compass', function() {
   gulp.src('./src/scss/*.scss')
